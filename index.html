@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<title>Market Share Tracking — Apple Brazil</title>
+<style>
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif;
+    font-size: 12px;
+    background: #fff;
+    padding: 24px;
+    color: #1d1d1f;
+  }
+  h2 {
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 16px;
+    color: #1d1d1f;
+  }
+  table {
+    border-collapse: collapse;
+    width: 100%;
+  }
+  th {
+    text-align: center;
+    font-weight: 700;
+    padding: 6px 10px;
+    border-bottom: 2px solid #1d1d1f;
+    white-space: nowrap;
+  }
+  th.left { text-align: left; }
+  td {
+    text-align: center;
+    padding: 5px 10px;
+    border-bottom: 1px solid #e0e0e0;
+    white-space: nowrap;
+  }
+  td.label {
+    text-align: left;
+    font-weight: 600;
+    padding-left: 4px;
+  }
+  td.sublabel {
+    text-align: left;
+    font-weight: 400;
+    padding-left: 16px;
+    color: #555;
+  }
+  td.mslabel {
+    text-align: left;
+    font-weight: 600;
+    padding-left: 16px;
+    color: #1d1d1f;
+    font-style: italic;
+  }
+  tr.section-header td {
+    background: #f5f5f7;
+    font-weight: 700;
+  }
+  tr.meli-header td {
+    background: #fff176;
+    font-weight: 700;
+  }
+  tr.apple td {
+    background: #ececec;
+  }
+  tr.ms-row td {
+    border-bottom: 2px solid #c8c8c8;
+    font-style: italic;
+    color: #444;
+  }
+  tr.ms-row.apple td {
+    background: #ececec;
+    border-bottom: 2px solid #b0b0b0;
+  }
+  td.red { color: #c00; font-weight: 600; }
+  td.green { color: #1a7a1a; font-weight: 600; }
+  td.qtd { font-weight: 700; }
+  td.qtd-ms { font-weight: 700; font-style: italic; }
+  .empty { color: #bbb; }
+  .updated {
+    font-size: 10px;
+    color: #999;
+    margin-top: 12px;
+    text-align: right;
+  }
+  tr.spacer td {
+    height: 14px;
+    border: none;
+    background: #fff;
+  }
+</style>
+</head>
+<body>
+
+<h2>Q3'26 GFK Market Share: Online 1P</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th class="left" style="min-width:160px;">Market GFK (#)</th>
+      <th>W1</th><th>W2</th><th>W3</th><th>W4</th>
+      <th>W5</th><th>W6</th><th>W7</th><th>W8</th><th>W9</th>
+      <th>W10</th><th>W11</th><th>W12</th><th>W13</th>
+      <th>QTD</th>
+    </tr>
+  </thead>
+  <tbody>
+
+    <!-- TOTAL ON 1P -->
+    <tr class="section-header">
+      <td class="label">Total ON 1P</td>
+      <td>155.5k</td><td>178.9k</td><td>168.9k</td><td>156.3k</td>
+      <td>164.7k</td><td>263.4k</td><td>177.3k</td><td>167.1k</td><td>162.4k</td>
+      <td>174.8k</td><td class="empty">—</td><td class="empty">—</td><td class="empty">—</td>
+      <td class="qtd">1.77M</td>
+    </tr>
+    <tr>
+      <td class="sublabel">Y/Y</td>
+      <td class="red">-13.3%</td><td class="red">-4.2%</td><td class="green">+4.5%</td><td class="green">+1.4%</td>
+      <td class="red">-4.9%</td><td class="red">-3.4%</td><td class="red">-1.8%</td><td class="green">+13.8%</td><td class="green">+1.8%</td>
+      <td class="red">-8.2%</td><td class="empty">—</td><td class="empty">—</td><td class="empty">—</td>
+      <td class="qtd red">-2.0%</td>
+    </tr>
+
+    <!-- APPLE ON -->
+    <tr class="apple">
+      <td class="label">Apple (#)</td>
+      <td>17.3k</td><td>17.4k</td><td>13.7k</td><td>13.2k</td>
+      <td>15.9k</td><td>27.7k</td><td>17.6k</td><td>15.3k</td><td>13.8k</td>
+      <td>19.8k</td><td class="empty">—</td><td class="empty">—</td><td class="empty">—</td>
+      <td class="qtd">171.7k</td>
+    </tr>
+    <tr class="apple">
+      <td class="sublabel">Y/Y</td>
+      <td class="red">-29.2%</td><td class="red">-46.2%</td><td class="red">-45.7%</td><td class="red">-49.8%</td>
+      <td class="red">-47.3%</td><td class="red">-30.3%</td><td class="red">-34.1%</td><td class="red">-30.6%</td><td class="red">-30.8%</td>
+      <td class="red">-22.0%</td><td class="empty">—</td><td class="empty">—</td><td class="empty">—</td>
+      <td class="qtd red">-36.9%</td>
+    </tr>
+    <tr class="ms-row apple">
+      <td class="mslabel">MS%</td>
+      <td>11.1%</td><td>9.7%</td><td>8.1%</td><td>8.4%</td>
+      <td>9.7%</td><td>10.5%</td><td>9.9%</td><td>9.2%</td><td>8.5%</td>
+      <td>11.3%</td><td class="empty">—</td><td class="empty">—</td><td class="empty">—</td>
+      <td class="qtd-ms">9.7%</td>
+    </tr>
+
+    <!-- SAMSUNG ON -->
+    <tr>
+      <td class="label">Samsung (#)</td>
+      <td>81.1k</td><td>96.0k</td><td>100.6k</td><td>93.4k</td>
+      <td>100.1k</td><td>157.0k</td><td>104.3k</td><td>115.5k</td><td>113.7k</td>
+      <td>111.1k</td><td class="empty">—</td><td class="empty">—</td><td class="empty">—</td>
+      <td class="qtd">1.07M</td>
+    </tr>
+    <tr>
+      <td class="sublabel">Y/Y</td>
+      <td class="red">-10.3%</td><td class="green">+7.5%</td><td class="green">+31.2%</td><td class="green">+22.8%</td>
+      <td class="green">+5.0%</td><td class="red">-0.2%</td><td class="green">+5.3%</td><td class="green">+45.3%</td><td class="green">+26.9%</td>
+      <td class="green">+18.3%</td><td class="empty">—</td><td class="empty">—</td><td class="empty">—</td>
+      <td class="qtd green">+13.3%</td>
+    </tr>
+    <tr class="ms-row">
+      <td class="mslabel">MS%</td>
+      <td>52.2%</td><td>53.7%</td><td>59.6%</td><td>59.8%</td>
+      <td>60.8%</td><td>59.6%</td><td>58.8%</td><td>69.1%</td><td>70.0%</td>
+      <td>63.6%</td><td class="empty">—</td><td class="empty">—</td><td class="empty">—</td>
+      <td class="qtd-ms">60.6%</td>
+    </tr>
+
+    <tr class="spacer"><td colspan="15"></td></tr>
+
+    <!-- TOTAL MELI -->
+    <tr class="meli-header">
+      <td class="label">Total Meli (#)</td>
+      <td>59.0k</td><td>63.0k</td><td>63.1k</td><td>59.7k</td>
+      <td>62.7k</td><td>95.6k</td><td>67.6k</td><td>59.1k</td><td>65.9k</td>
+      <td>68.7k</td><td class="empty">—</td><td class="empty">—</td><td class="empty">—</td>
+      <td class="qtd">664.4k</td>
+    </tr>
+    <tr>
+      <td class="sublabel">Y/Y</td>
+      <td class="green">+0.6%</td><td class="green">+8.0%</td><td class="green">+15.7%</td><td class="green">+24.9%</td>
+      <td class="green">+40.7%</td><td class="green">+26.5%</td><td class="green">+40.8%</td><td class="green">+34.5%</td><td class="green">+32.0%</td>
+      <td class="green">+14.9%</td><td class="empty">—</td><td class="empty">—</td><td class="empty">—</td>
+      <td class="qtd green">+22.8%</td>
+    </tr>
+
+    <!-- APPLE MELI -->
+    <tr class="apple">
+      <td class="label">Apple (#)</td>
+      <td>5.0k</td><td>4.7k</td><td>4.2k</td><td>4.7k</td>
+      <td>6.3k</td><td>8.9k</td><td>6.6k</td><td>6.1k</td><td>5.3k</td>
+      <td>8.1k</td><td class="empty">—</td><td class="empty">—</td><td class="empty">—</td>
+      <td class="qtd">59.9k</td>
+    </tr>
+    <tr class="apple">
+      <td class="sublabel">Y/Y</td>
+      <td class="red">-32.2%</td><td class="red">-42.5%</td><td class="red">-32.5%</td><td class="red">-26.8%</td>
+      <td class="green">+4.9%</td><td class="red">-13.3%</td><td class="green">+3.0%</td><td class="green">+18.7%</td><td class="red">-5.7%</td>
+      <td class="red">-9.8%</td><td class="empty">—</td><td class="empty">—</td><td class="empty">—</td>
+      <td class="qtd red">-15.2%</td>
+    </tr>
+    <tr class="ms-row apple">
+      <td class="mslabel">MS%</td>
+      <td>8.5%</td><td>7.5%</td><td>6.7%</td><td>7.9%</td>
+      <td>10.0%</td><td>9.3%</td><td>9.8%</td><td>10.3%</td><td>8.0%</td>
+      <td>11.8%</td><td class="empty">—</td><td class="empty">—</td><td class="empty">—</td>
+      <td class="qtd-ms">9.0%</td>
+    </tr>
+
+    <!-- SAMSUNG MELI -->
+    <tr>
+      <td class="label">Samsung (#)</td>
+      <td>28.6k</td><td>29.1k</td><td>31.2k</td><td>29.4k</td>
+      <td>33.0k</td><td>53.0k</td><td>37.1k</td><td>38.5k</td><td>43.8k</td>
+      <td>39.5k</td><td class="empty">—</td><td class="empty">—</td><td class="empty">—</td>
+      <td class="qtd">363.2k</td>
+    </tr>
+    <tr>
+      <td class="sublabel">Y/Y</td>
+      <td class="green">+27.8%</td><td class="green">+44.2%</td><td class="green">+30.4%</td><td class="green">+36.4%</td>
+      <td class="green">+45.2%</td><td class="green">+23.7%</td><td class="green">+47.4%</td><td class="green">+61.4%</td><td class="green">+64.4%</td>
+      <td class="green">+57.3%</td><td class="empty">—</td><td class="empty">—</td><td class="empty">—</td>
+      <td class="qtd green">+42.8%</td>
+    </tr>
+    <tr class="ms-row">
+      <td class="mslabel">MS%</td>
+      <td>48.5%</td><td>46.2%</td><td>49.4%</td><td>49.2%</td>
+      <td>52.6%</td><td>55.4%</td><td>54.9%</td><td>65.1%</td><td>66.5%</td>
+      <td>57.5%</td><td class="empty">—</td><td class="empty">—</td><td class="empty">—</td>
+      <td class="qtd-ms">54.7%</td>
+    </tr>
+
+  </tbody>
+</table>
+
+<p class="updated">Ultima atualizacao: W10 — 15 Jun 2026</p>
+
+<br><br>
+
+<h2>Q3'26 GFK Market Share: Online 1P + Online 3P</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th class="left" style="min-width:160px;">Market GFK (#)</th>
+      <th>W1</th><th>W2</th><th>W3</th><th>W4</th>
+      <th>W5</th><th>W6</th><th>W7</th><th>W8</th><th>W9</th>
+      <th>W10</th><th>W11</th><th>W12</th><th>W13</th>
+      <th>QTD</th>
+    </tr>
+  </thead>
+  <tbody>
+
+    <!-- TOTAL ON 1P+3P -->
+    <tr class="section-header">
+      <td class="label">Total ON 1P+3P</td>
+      <td>219.9k</td><td>252.4k</td><td>235.6k</td><td>216.6k</td>
+      <td>230.6k</td><td>349.0k</td><td>247.4k</td><td>231.4k</td><td>221.4k</td>
+      <td>247.1k</td><td class="empty">—</td><td class="empty">—</td><td class="empty">—</td>
+      <td class="qtd">2.45M</td>
+    </tr>
+    <tr>
+      <td class="sublabel">Y/Y</td>
+      <td class="red">-17.3%</td><td class="red">-8.4%</td><td class="green">+0.6%</td><td class="red">-5.4%</td>
+      <td class="red">-11.6%</td><td class="red">-9.4%</td><td class="red">-8.7%</td><td class="green">+2.4%</td><td class="red">-7.7%</td>
+      <td class="red">-12.8%</td><td class="empty">—</td><td class="empty">—</td><td class="empty">—</td>
+      <td class="qtd red">-8.2%</td>
+    </tr>
+
+    <!-- APPLE ON 1P+3P -->
+    <tr class="apple">
+      <td class="label">Apple (#)</td>
+      <td>19.4k</td><td>19.5k</td><td>15.5k</td><td>14.8k</td>
+      <td>17.8k</td><td>30.0k</td><td>19.6k</td><td>16.9k</td><td>15.8k</td>
+      <td>22.4k</td><td class="empty">—</td><td class="empty">—</td><td class="empty">—</td>
+      <td class="qtd">191.7k</td>
+    </tr>
+    <tr class="apple">
+      <td class="sublabel">Y/Y</td>
+      <td class="red">-25.1%</td><td class="red">-42.5%</td><td class="red">-42.1%</td><td class="red">-45.8%</td>
+      <td class="red">-43.7%</td><td class="red">-27.2%</td><td class="red">-30.7%</td><td class="red">-28.2%</td><td class="red">-26.8%</td>
+      <td class="red">-17.1%</td><td class="empty">—</td><td class="empty">—</td><td class="empty">—</td>
+      <td class="qtd red">-33.2%</td>
+    </tr>
+    <tr class="ms-row apple">
+      <td class="mslabel">MS%</td>
+      <td>8.8%</td><td>7.7%</td><td>6.6%</td><td>6.8%</td>
+      <td>7.7%</td><td>8.6%</td><td>7.9%</td><td>7.3%</td><td>7.1%</td>
+      <td>9.1%</td><td class="empty">—</td><td class="empty">—</td><td class="empty">—</td>
+      <td class="qtd-ms">7.8%</td>
+    </tr>
+
+    <!-- SAMSUNG ON 1P+3P -->
+    <tr>
+      <td class="label">Samsung (#)</td>
+      <td>101.3k</td><td>118.4k</td><td>120.3k</td><td>113.6k</td>
+      <td>121.7k</td><td>182.9k</td><td>125.7k</td><td>135.9k</td><td>132.9k</td>
+      <td>137.6k</td><td class="empty">—</td><td class="empty">—</td><td class="empty">—</td>
+      <td class="qtd">1.29M</td>
+    </tr>
+    <tr>
+      <td class="sublabel">Y/Y</td>
+      <td class="red">-13.7%</td><td class="red">-1.0%</td><td class="green">+17.7%</td><td class="green">+12.9%</td>
+      <td class="green">+0.8%</td><td class="red">-2.0%</td><td class="red">-0.2%</td><td class="green">+27.8%</td><td class="green">+16.0%</td>
+      <td class="green">+9.3%</td><td class="empty">—</td><td class="empty">—</td><td class="empty">—</td>
+      <td class="qtd green">+5.8%</td>
+    </tr>
+    <tr class="ms-row">
+      <td class="mslabel">MS%</td>
+      <td>46.1%</td><td>46.9%</td><td>51.1%</td><td>52.4%</td>
+      <td>52.8%</td><td>52.4%</td><td>50.8%</td><td>58.7%</td><td>60.0%</td>
+      <td>55.7%</td><td class="empty">—</td><td class="empty">—</td><td class="empty">—</td>
+      <td class="qtd-ms">52.6%</td>
+    </tr>
+
+    <tr class="spacer"><td colspan="15"></td></tr>
+
+    <!-- TOTAL MELI 1P+3P -->
+    <tr class="meli-header">
+      <td class="label">Total Meli (#)</td>
+      <td>112.8k</td><td>124.0k</td><td>117.6k</td><td>109.0k</td>
+      <td>119.1k</td><td>167.6k</td><td>126.6k</td><td>111.7k</td><td>115.3k</td>
+      <td>128.0k</td><td class="empty">—</td><td class="empty">—</td><td class="empty">—</td>
+      <td class="qtd">1.23M</td>
+    </tr>
+    <tr>
+      <td class="sublabel">Y/Y</td>
+      <td class="red">-9.0%</td><td class="green">+0.5%</td><td class="green">+8.9%</td><td class="green">+7.1%</td>
+      <td class="green">+9.3%</td><td class="green">+4.2%</td><td class="green">+8.8%</td><td class="green">+8.4%</td><td class="green">+2.2%</td>
+      <td class="red">-4.4%</td><td class="empty">—</td><td class="empty">—</td><td class="empty">—</td>
+      <td class="qtd green">+3.2%</td>
+    </tr>
+
+    <!-- APPLE MELI 1P+3P -->
+    <tr class="apple">
+      <td class="label">Apple (#)</td>
+      <td>6.3k</td><td>6.3k</td><td>5.8k</td><td>6.1k</td>
+      <td>8.0k</td><td>10.9k</td><td>8.1k</td><td>7.4k</td><td>6.9k</td>
+      <td>10.0k</td><td class="empty">—</td><td class="empty">—</td><td class="empty">—</td>
+      <td class="qtd">75.8k</td>
+    </tr>
+    <tr class="apple">
+      <td class="sublabel">Y/Y</td>
+      <td class="red">-23.9%</td><td class="red">-31.2%</td><td class="red">-19.4%</td><td class="red">-14.9%</td>
+      <td class="green">+17.0%</td><td class="red">-4.6%</td><td class="green">+13.1%</td><td class="green">+24.6%</td><td class="green">+3.9%</td>
+      <td class="red">-2.8%</td><td class="empty">—</td><td class="empty">—</td><td class="empty">—</td>
+      <td class="qtd red">-5.4%</td>
+    </tr>
+    <tr class="ms-row apple">
+      <td class="mslabel">MS%</td>
+      <td>5.6%</td><td>5.1%</td><td>4.9%</td><td>5.6%</td>
+      <td>6.7%</td><td>6.5%</td><td>6.4%</td><td>6.6%</td><td>6.0%</td>
+      <td>7.8%</td><td class="empty">—</td><td class="empty">—</td><td class="empty">—</td>
+      <td class="qtd-ms">6.2%</td>
+    </tr>
+
+    <!-- SAMSUNG MELI 1P+3P -->
+    <tr>
+      <td class="label">Samsung (#)</td>
+      <td>46.3k</td><td>48.7k</td><td>47.6k</td><td>46.7k</td>
+      <td>52.3k</td><td>75.3k</td><td>55.3k</td><td>54.6k</td><td>59.9k</td>
+      <td>61.4k</td><td class="empty">—</td><td class="empty">—</td><td class="empty">—</td>
+      <td class="qtd">548.1k</td>
+    </tr>
+    <tr>
+      <td class="sublabel">Y/Y</td>
+      <td class="green">+13.2%</td><td class="green">+18.5%</td><td class="green">+15.3%</td><td class="green">+26.9%</td>
+      <td class="green">+31.6%</td><td class="green">+16.9%</td><td class="green">+19.8%</td><td class="green">+24.5%</td><td class="green">+30.2%</td>
+      <td class="green">+21.1%</td><td class="empty">—</td><td class="empty">—</td><td class="empty">—</td>
+      <td class="qtd green">+21.5%</td>
+    </tr>
+    <tr class="ms-row">
+      <td class="mslabel">MS%</td>
+      <td>41.0%</td><td>39.3%</td><td>40.5%</td><td>42.8%</td>
+      <td>43.9%</td><td>44.9%</td><td>43.7%</td><td>48.9%</td><td>52.0%</td>
+      <td>48.0%</td><td class="empty">—</td><td class="empty">—</td><td class="empty">—</td>
+      <td class="qtd-ms">44.5%</td>
+    </tr>
+
+  </tbody>
+</table>
+
+<br><br>
+
+<h2>Q3'26 GFK Market Share: Online 1P + Offline</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th class="left" style="min-width:160px;">Market GFK (#)</th>
+      <th>W1</th><th>W2</th><th>W3</th><th>W4</th>
+      <th>W5</th><th>W6</th><th>W7</th><th>W8</th><th>W9</th>
+      <th>W10</th><th>W11</th><th>W12</th><th>W13</th>
+      <th>QTD</th>
+    </tr>
+  </thead>
+  <tbody>
+
+    <!-- TOTAL ON+OFF -->
+    <tr class="section-header">
+      <td class="label">Total ON+OFF</td>
+      <td>358.0k</td><td>412.4k</td><td>379.8k</td><td>368.3k</td>
+      <td>383.2k</td><td>619.0k</td><td>407.2k</td><td>374.7k</td><td>388.5k</td>
+      <td>407.9k</td><td class="empty">—</td><td class="empty">—</td><td class="empty">—</td>
+      <td class="qtd">4.10M</td>
+    </tr>
+    <tr>
+      <td class="sublabel">Y/Y</td>
+      <td class="red">-15.9%</td><td class="red">-6.5%</td><td class="red">-1.0%</td><td class="green">+1.8%</td>
+      <td class="red">-10.9%</td><td class="red">-14.1%</td><td class="red">-8.3%</td><td class="green">+1.5%</td><td class="red">-2.8%</td>
+      <td class="red">-11.1%</td><td class="empty">—</td><td class="empty">—</td><td class="empty">—</td>
+      <td class="qtd red">-7.6%</td>
+    </tr>
+
+    <!-- APPLE ON+OFF -->
+    <tr class="apple">
+      <td class="label">Apple (#)</td>
+      <td>28.0k</td><td>30.0k</td><td>24.5k</td><td>23.3k</td>
+      <td>26.2k</td><td>42.5k</td><td>29.3k</td><td>25.7k</td><td>24.7k</td>
+      <td>30.4k</td><td class="empty">—</td><td class="empty">—</td><td class="empty">—</td>
+      <td class="qtd">284.6k</td>
+    </tr>
+    <tr class="apple">
+      <td class="sublabel">Y/Y</td>
+      <td class="red">-25.1%</td><td class="red">-35.3%</td><td class="red">-35.9%</td><td class="red">-37.5%</td>
+      <td class="red">-38.8%</td><td class="red">-27.0%</td><td class="red">-24.8%</td><td class="red">-22.7%</td><td class="red">-24.4%</td>
+      <td class="red">-20.3%</td><td class="empty">—</td><td class="empty">—</td><td class="empty">—</td>
+      <td class="qtd red">-29.4%</td>
+    </tr>
+    <tr class="ms-row apple">
+      <td class="mslabel">MS%</td>
+      <td>7.8%</td><td>7.3%</td><td>6.5%</td><td>6.3%</td>
+      <td>6.8%</td><td>6.9%</td><td>7.2%</td><td>6.9%</td><td>6.4%</td>
+      <td>7.5%</td><td class="empty">—</td><td class="empty">—</td><td class="empty">—</td>
+      <td class="qtd-ms">6.9%</td>
+    </tr>
+
+    <!-- SAMSUNG ON+OFF -->
+    <tr>
+      <td class="label">Samsung (#)</td>
+      <td>187.2k</td><td>220.5k</td><td>218.7k</td><td>217.3k</td>
+      <td>226.9k</td><td>368.2k</td><td>234.4k</td><td>236.6k</td><td>251.4k</td>
+      <td>247.8k</td><td class="empty">—</td><td class="empty">—</td><td class="empty">—</td>
+      <td class="qtd">2.41M</td>
+    </tr>
+    <tr>
+      <td class="sublabel">Y/Y</td>
+      <td class="red">-16.2%</td><td class="red">-1.8%</td><td class="green">+13.1%</td><td class="green">+18.0%</td>
+      <td class="red">-0.2%</td><td class="red">-10.9%</td><td class="red">-2.2%</td><td class="green">+20.0%</td><td class="green">+18.1%</td>
+      <td class="green">+9.2%</td><td class="empty">—</td><td class="empty">—</td><td class="empty">—</td>
+      <td class="qtd green">+2.8%</td>
+    </tr>
+    <tr class="ms-row">
+      <td class="mslabel">MS%</td>
+      <td>52.3%</td><td>53.5%</td><td>57.6%</td><td>59.0%</td>
+      <td>59.2%</td><td>59.5%</td><td>57.6%</td><td>63.1%</td><td>64.7%</td>
+      <td>60.8%</td><td class="empty">—</td><td class="empty">—</td><td class="empty">—</td>
+      <td class="qtd-ms">58.8%</td>
+    </tr>
+
+    <tr class="spacer"><td colspan="15"></td></tr>
+
+    <!-- TOTAL MELI ON+OFF -->
+    <tr class="meli-header">
+      <td class="label">Total Meli (#)</td>
+      <td>59.0k</td><td>63.0k</td><td>63.1k</td><td>59.7k</td>
+      <td>62.7k</td><td>95.6k</td><td>67.6k</td><td>59.1k</td><td>65.9k</td>
+      <td>68.7k</td><td class="empty">—</td><td class="empty">—</td><td class="empty">—</td>
+      <td class="qtd">664.4k</td>
+    </tr>
+    <tr>
+      <td class="sublabel">Y/Y</td>
+      <td class="green">+0.6%</td><td class="green">+8.0%</td><td class="green">+15.7%</td><td class="green">+24.9%</td>
+      <td class="green">+40.7%</td><td class="green">+26.5%</td><td class="green">+40.8%</td><td class="green">+34.5%</td><td class="green">+32.0%</td>
+      <td class="green">+14.9%</td><td class="empty">—</td><td class="empty">—</td><td class="empty">—</td>
+      <td class="qtd green">+22.8%</td>
+    </tr>
+
+    <!-- APPLE MELI ON+OFF -->
+    <tr class="apple">
+      <td class="label">Apple (#)</td>
+      <td>5.0k</td><td>4.7k</td><td>4.2k</td><td>4.7k</td>
+      <td>6.3k</td><td>8.9k</td><td>6.6k</td><td>6.1k</td><td>5.3k</td>
+      <td>8.1k</td><td class="empty">—</td><td class="empty">—</td><td class="empty">—</td>
+      <td class="qtd">59.9k</td>
+    </tr>
+    <tr class="apple">
+      <td class="sublabel">Y/Y</td>
+      <td class="red">-32.2%</td><td class="red">-42.5%</td><td class="red">-32.5%</td><td class="red">-26.8%</td>
+      <td class="green">+4.9%</td><td class="red">-13.3%</td><td class="green">+3.0%</td><td class="green">+18.7%</td><td class="red">-5.7%</td>
+      <td class="red">-9.8%</td><td class="empty">—</td><td class="empty">—</td><td class="empty">—</td>
+      <td class="qtd red">-15.2%</td>
+    </tr>
+    <tr class="ms-row apple">
+      <td class="mslabel">MS%</td>
+      <td>8.5%</td><td>7.5%</td><td>6.7%</td><td>7.9%</td>
+      <td>10.0%</td><td>9.3%</td><td>9.8%</td><td>10.3%</td><td>8.0%</td>
+      <td>11.8%</td><td class="empty">—</td><td class="empty">—</td><td class="empty">—</td>
+      <td class="qtd-ms">9.0%</td>
+    </tr>
+
+    <!-- SAMSUNG MELI ON+OFF -->
+    <tr>
+      <td class="label">Samsung (#)</td>
+      <td>28.6k</td><td>29.1k</td><td>31.2k</td><td>29.4k</td>
+      <td>33.0k</td><td>53.0k</td><td>37.1k</td><td>38.5k</td><td>43.8k</td>
+      <td>39.5k</td><td class="empty">—</td><td class="empty">—</td><td class="empty">—</td>
+      <td class="qtd">363.2k</td>
+    </tr>
+    <tr>
+      <td class="sublabel">Y/Y</td>
+      <td class="green">+27.8%</td><td class="green">+44.2%</td><td class="green">+30.4%</td><td class="green">+36.4%</td>
+      <td class="green">+45.2%</td><td class="green">+23.7%</td><td class="green">+47.4%</td><td class="green">+61.4%</td><td class="green">+64.4%</td>
+      <td class="green">+57.3%</td><td class="empty">—</td><td class="empty">—</td><td class="empty">—</td>
+      <td class="qtd green">+42.8%</td>
+    </tr>
+    <tr class="ms-row">
+      <td class="mslabel">MS%</td>
+      <td>48.5%</td><td>46.2%</td><td>49.4%</td><td>49.2%</td>
+      <td>52.6%</td><td>55.4%</td><td>54.9%</td><td>65.1%</td><td>66.5%</td>
+      <td>57.5%</td><td class="empty">—</td><td class="empty">—</td><td class="empty">—</td>
+      <td class="qtd-ms">54.7%</td>
+    </tr>
+
+  </tbody>
+</table>
+
+</body>
+</html>
