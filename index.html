@@ -98,9 +98,557 @@
     border: none;
     background: #fff;
   }
+  .tabs {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 20px;
+  }
+  .tab-btn {
+    font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    padding: 8px 16px;
+    border: 1px solid #d0d0d0;
+    background: #f5f5f7;
+    color: #555;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+  .tab-btn.active {
+    background: #1d1d1f;
+    color: #fff;
+    border-color: #1d1d1f;
+  }
 </style>
 </head>
 <body>
+<div class="tabs">
+  <button class="tab-btn active" id="btn-q4" onclick="showTab('q4')">Q4'26 (Atual)</button>
+  <button class="tab-btn" id="btn-q3" onclick="showTab('q3')">Q3'26 (Historico)</button>
+</div>
+
+<div id="tab-q4" class="tab-content">
+
+<h2>Q4'26 GFK Market Share: Online 1P</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th class="left" style="min-width:160px;">Market GFK (#)</th>
+      <th>W1</th><th>W2</th><th>W3</th><th>W4</th>
+      <th>W5</th><th>W6</th><th>W7</th><th>W8</th><th>W9</th>
+      <th>W10</th><th>W11</th><th>W12</th><th>W13</th>
+      <th>QTD</th>
+    </tr>
+  </thead>
+  <tbody>
+
+    <!-- TOTAL ON 1P -->
+    <tr class="section-header">
+      <td class="label">Total ON 1P</td>
+      <td><span class="empty">–</span></td><td><span class="empty">–</span></td><td><span class="empty">–</span></td><td><span class="empty">–</span></td>
+      <td><span class="empty">–</span></td><td><span class="empty">–</span></td><td><span class="empty">–</span></td><td><span class="empty">–</span></td><td><span class="empty">–</span></td>
+      <td><span class="empty">–</span></td><td><span class="empty">–</span></td><td><span class="empty">–</span></td><td><span class="empty">–</span></td>
+      <td class="qtd"><span class="empty">–</span></td>
+    </tr>
+    <tr>
+      <td class="sublabel">Y/Y</td>
+      <td class="red"><span class="empty">–</span></td><td class="red"><span class="empty">–</span></td><td class="green"><span class="empty">–</span></td><td class="green"><span class="empty">–</span></td>
+      <td class="red"><span class="empty">–</span></td><td class="red"><span class="empty">–</span></td><td class="red"><span class="empty">–</span></td><td class="green"><span class="empty">–</span></td><td class="green"><span class="empty">–</span></td>
+      <td class="red"><span class="empty">–</span></td><td class="green"><span class="empty">–</span></td><td class="green"><span class="empty">–</span></td><td class="red"><span class="empty">–</span></td>
+      <td class="qtd red"><span class="empty">–</span></td>
+    </tr>
+
+    <!-- APPLE ON -->
+    <tr class="apple">
+      <td class="label">Apple (#)</td>
+      <td><span class="empty">–</span></td><td><span class="empty">–</span></td><td><span class="empty">–</span></td><td><span class="empty">–</span></td>
+      <td><span class="empty">–</span></td><td><span class="empty">–</span></td><td><span class="empty">–</span></td><td><span class="empty">–</span></td><td><span class="empty">–</span></td>
+      <td><span class="empty">–</span></td><td><span class="empty">–</span></td><td><span class="empty">–</span></td><td><span class="empty">–</span></td>
+      <td class="qtd"><span class="empty">–</span></td>
+    </tr>
+    <tr class="apple">
+      <td class="sublabel">Y/Y</td>
+      <td class="red"><span class="empty">–</span></td><td class="red"><span class="empty">–</span></td><td class="red"><span class="empty">–</span></td><td class="red"><span class="empty">–</span></td>
+      <td class="red"><span class="empty">–</span></td><td class="red"><span class="empty">–</span></td><td class="red"><span class="empty">–</span></td><td class="red"><span class="empty">–</span></td><td class="red"><span class="empty">–</span></td>
+      <td class="red"><span class="empty">–</span></td><td class="red"><span class="empty">–</span></td><td class="red"><span class="empty">–</span></td><td class="red"><span class="empty">–</span></td>
+      <td class="qtd red"><span class="empty">–</span></td>
+    </tr>
+    <tr class="ms-row apple">
+      <td class="mslabel">MS%</td>
+      <td><span class="empty">–</span></td><td><span class="empty">–</span></td><td><span class="empty">–</span></td><td><span class="empty">–</span></td>
+      <td><span class="empty">–</span></td><td><span class="empty">–</span></td><td><span class="empty">–</span></td><td><span class="empty">–</span></td><td><span class="empty">–</span></td>
+      <td><span class="empty">–</span></td><td><span class="empty">–</span></td><td><span class="empty">–</span></td><td><span class="empty">–</span></td>
+      <td class="qtd-ms"><span class="empty">–</span></td>
+    </tr>
+    <tr class="msyy-row apple">
+      <td class="mslabel">MS% Y/Y</td>
+      <td class="red"><span class="empty">–</span></td><td class="red"><span class="empty">–</span></td><td class="red"><span class="empty">–</span></td><td class="red"><span class="empty">–</span></td>
+      <td class="red"><span class="empty">–</span></td><td class="red"><span class="empty">–</span></td><td class="red"><span class="empty">–</span></td><td class="red"><span class="empty">–</span></td><td class="red"><span class="empty">–</span></td>
+      <td class="red"><span class="empty">–</span></td><td class="red"><span class="empty">–</span></td><td class="red"><span class="empty">–</span></td><td class="red"><span class="empty">–</span></td>
+      <td class="qtd-ms red"><span class="empty">–</span></td>
+    </tr>
+    <tr>
+      <td class="label">Samsung (#)</td>
+      <td><span class="empty">–</span></td><td><span class="empty">–</span></td><td><span class="empty">–</span></td><td><span class="empty">–</span></td>
+      <td><span class="empty">–</span></td><td><span class="empty">–</span></td><td><span class="empty">–</span></td><td><span class="empty">–</span></td><td><span class="empty">–</span></td>
+      <td><span class="empty">–</span></td><td><span class="empty">–</span></td><td><span class="empty">–</span></td><td><span class="empty">–</span></td>
+      <td class="qtd"><span class="empty">–</span></td>
+    </tr>
+    <tr>
+      <td class="sublabel">Y/Y</td>
+      <td class="red"><span class="empty">–</span></td><td class="green"><span class="empty">–</span></td><td class="green"><span class="empty">–</span></td><td class="green"><span class="empty">–</span></td>
+      <td class="green"><span class="empty">–</span></td><td class="red"><span class="empty">–</span></td><td class="green"><span class="empty">–</span></td><td class="green"><span class="empty">–</span></td><td class="green"><span class="empty">–</span></td>
+      <td class="green"><span class="empty">–</span></td><td class="green"><span class="empty">–</span></td><td class="green"><span class="empty">–</span></td><td class="green"><span class="empty">–</span></td>
+      <td class="qtd green"><span class="empty">–</span></td>
+    </tr>
+    <tr class="ms-row">
+      <td class="mslabel">MS%</td>
+      <td><span class="empty">–</span></td><td><span class="empty">–</span></td><td><span class="empty">–</span></td><td><span class="empty">–</span></td>
+      <td><span class="empty">–</span></td><td><span class="empty">–</span></td><td><span class="empty">–</span></td><td><span class="empty">–</span></td><td><span class="empty">–</span></td>
+      <td><span class="empty">–</span></td><td><span class="empty">–</span></td><td><span class="empty">–</span></td><td><span class="empty">–</span></td>
+      <td class="qtd-ms"><span class="empty">–</span></td>
+    </tr>
+    <tr class="msyy-row">
+      <td class="mslabel">MS% Y/Y</td>
+      <td class="green"><span class="empty">–</span></td><td class="green"><span class="empty">–</span></td><td class="green"><span class="empty">–</span></td><td class="green"><span class="empty">–</span></td>
+      <td class="green"><span class="empty">–</span></td><td class="green"><span class="empty">–</span></td><td class="green"><span class="empty">–</span></td><td class="green"><span class="empty">–</span></td><td class="green"><span class="empty">–</span></td>
+      <td class="green"><span class="empty">–</span></td><td class="green"><span class="empty">–</span></td><td class="green"><span class="empty">–</span></td><td class="green"><span class="empty">–</span></td>
+      <td class="qtd-ms green"><span class="empty">–</span></td>
+    </tr>
+
+    <tr class="spacer"><td colspan="15"><span class="empty">–</span></td></tr>
+
+    <!-- TOTAL MELI -->
+    <tr class="meli-header">
+      <td class="label">Total Meli (#)</td>
+      <td><span class="empty">–</span></td><td><span class="empty">–</span></td><td><span class="empty">–</span></td><td><span class="empty">–</span></td>
+      <td><span class="empty">–</span></td><td><span class="empty">–</span></td><td><span class="empty">–</span></td><td><span class="empty">–</span></td><td><span class="empty">–</span></td>
+      <td><span class="empty">–</span></td><td><span class="empty">–</span></td><td><span class="empty">–</span></td><td><span class="empty">–</span></td>
+      <td class="qtd"><span class="empty">–</span></td>
+    </tr>
+    <tr>
+      <td class="sublabel">Y/Y</td>
+      <td class="green"><span class="empty">–</span></td><td class="green"><span class="empty">–</span></td><td class="green"><span class="empty">–</span></td><td class="green"><span class="empty">–</span></td>
+      <td class="green"><span class="empty">–</span></td><td class="green"><span class="empty">–</span></td><td class="green"><span class="empty">–</span></td><td class="green"><span class="empty">–</span></td><td class="green"><span class="empty">–</span></td>
+      <td class="green"><span class="empty">–</span></td><td class="green"><span class="empty">–</span></td><td class="green"><span class="empty">–</span></td><td class="green"><span class="empty">–</span></td>
+      <td class="qtd green"><span class="empty">–</span></td>
+    </tr>
+
+    <!-- APPLE MELI -->
+    <tr class="apple">
+      <td class="label">Apple (#)</td>
+      <td><span class="empty">–</span></td><td><span class="empty">–</span></td><td><span class="empty">–</span></td><td><span class="empty">–</span></td>
+      <td><span class="empty">–</span></td><td><span class="empty">–</span></td><td><span class="empty">–</span></td><td><span class="empty">–</span></td><td><span class="empty">–</span></td>
+      <td><span class="empty">–</span></td><td><span class="empty">–</span></td><td><span class="empty">–</span></td><td><span class="empty">–</span></td>
+      <td class="qtd"><span class="empty">–</span></td>
+    </tr>
+    <tr class="apple">
+      <td class="sublabel">Y/Y</td>
+      <td class="red"><span class="empty">–</span></td><td class="red"><span class="empty">–</span></td><td class="red"><span class="empty">–</span></td><td class="red"><span class="empty">–</span></td>
+      <td class="green"><span class="empty">–</span></td><td class="red"><span class="empty">–</span></td><td class="green"><span class="empty">–</span></td><td class="green"><span class="empty">–</span></td><td class="red"><span class="empty">–</span></td>
+      <td class="red"><span class="empty">–</span></td><td class="red"><span class="empty">–</span></td><td class="red"><span class="empty">–</span></td><td class="red"><span class="empty">–</span></td>
+      <td class="qtd red"><span class="empty">–</span></td>
+    </tr>
+    <tr class="ms-row apple">
+      <td class="mslabel">MS%</td>
+      <td><span class="empty">–</span></td><td><span class="empty">–</span></td><td><span class="empty">–</span></td><td><span class="empty">–</span></td>
+      <td><span class="empty">–</span></td><td><span class="empty">–</span></td><td><span class="empty">–</span></td><td><span class="empty">–</span></td><td><span class="empty">–</span></td>
+      <td><span class="empty">–</span></td><td><span class="empty">–</span></td><td><span class="empty">–</span></td><td><span class="empty">–</span></td>
+      <td class="qtd-ms"><span class="empty">–</span></td>
+    </tr>
+    <tr class="msyy-row apple">
+      <td class="mslabel">MS% Y/Y</td>
+      <td class="red"><span class="empty">–</span></td><td class="red"><span class="empty">–</span></td><td class="red"><span class="empty">–</span></td><td class="red"><span class="empty">–</span></td>
+      <td class="red"><span class="empty">–</span></td><td class="red"><span class="empty">–</span></td><td class="red"><span class="empty">–</span></td><td class="red"><span class="empty">–</span></td><td class="red"><span class="empty">–</span></td>
+      <td class="red"><span class="empty">–</span></td><td class="red"><span class="empty">–</span></td><td class="red"><span class="empty">–</span></td><td class="red"><span class="empty">–</span></td>
+      <td class="qtd-ms red"><span class="empty">–</span></td>
+    </tr>
+
+    <!-- SAMSUNG MELI -->
+    <tr>
+      <td class="label">Samsung (#)</td>
+      <td><span class="empty">–</span></td><td><span class="empty">–</span></td><td><span class="empty">–</span></td><td><span class="empty">–</span></td>
+      <td><span class="empty">–</span></td><td><span class="empty">–</span></td><td><span class="empty">–</span></td><td><span class="empty">–</span></td><td><span class="empty">–</span></td>
+      <td><span class="empty">–</span></td><td><span class="empty">–</span></td><td><span class="empty">–</span></td><td><span class="empty">–</span></td>
+      <td class="qtd"><span class="empty">–</span></td>
+    </tr>
+    <tr>
+      <td class="sublabel">Y/Y</td>
+      <td class="green"><span class="empty">–</span></td><td class="green"><span class="empty">–</span></td><td class="green"><span class="empty">–</span></td><td class="green"><span class="empty">–</span></td>
+      <td class="green"><span class="empty">–</span></td><td class="green"><span class="empty">–</span></td><td class="green"><span class="empty">–</span></td><td class="green"><span class="empty">–</span></td><td class="green"><span class="empty">–</span></td>
+      <td class="green"><span class="empty">–</span></td><td class="green"><span class="empty">–</span></td><td class="green"><span class="empty">–</span></td><td class="green"><span class="empty">–</span></td>
+      <td class="qtd green"><span class="empty">–</span></td>
+    </tr>
+    <tr class="ms-row">
+      <td class="mslabel">MS%</td>
+      <td><span class="empty">–</span></td><td><span class="empty">–</span></td><td><span class="empty">–</span></td><td><span class="empty">–</span></td>
+      <td><span class="empty">–</span></td><td><span class="empty">–</span></td><td><span class="empty">–</span></td><td><span class="empty">–</span></td><td><span class="empty">–</span></td>
+      <td><span class="empty">–</span></td><td><span class="empty">–</span></td><td><span class="empty">–</span></td><td><span class="empty">–</span></td>
+      <td class="qtd-ms"><span class="empty">–</span></td>
+    </tr>
+    <tr class="msyy-row">
+      <td class="mslabel">MS% Y/Y</td>
+      <td class="green"><span class="empty">–</span></td><td class="green"><span class="empty">–</span></td><td class="green"><span class="empty">–</span></td><td class="green"><span class="empty">–</span></td>
+      <td class="green"><span class="empty">–</span></td><td class="red"><span class="empty">–</span></td><td class="green"><span class="empty">–</span></td><td class="green"><span class="empty">–</span></td><td class="green"><span class="empty">–</span></td>
+      <td class="green"><span class="empty">–</span></td><td class="green"><span class="empty">–</span></td><td class="green"><span class="empty">–</span></td><td class="green"><span class="empty">–</span></td>
+      <td class="qtd-ms green"><span class="empty">–</span></td>
+    </tr>
+
+  </tbody>
+</table>
+
+<p class="updated">Aguardando atualizacao — W1</p>
+
+<br><br>
+
+<h2>Q4'26 GFK Market Share: Online 1P + Online 3P</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th class="left" style="min-width:160px;">Market GFK (#)</th>
+      <th>W1</th><th>W2</th><th>W3</th><th>W4</th>
+      <th>W5</th><th>W6</th><th>W7</th><th>W8</th><th>W9</th>
+      <th>W10</th><th>W11</th><th>W12</th><th>W13</th>
+      <th>QTD</th>
+    </tr>
+  </thead>
+  <tbody>
+
+    <!-- TOTAL ON 1P+3P -->
+    <tr class="section-header">
+      <td class="label">Total ON 1P+3P</td>
+      <td><span class="empty">–</span></td><td><span class="empty">–</span></td><td><span class="empty">–</span></td><td><span class="empty">–</span></td>
+      <td><span class="empty">–</span></td><td><span class="empty">–</span></td><td><span class="empty">–</span></td><td><span class="empty">–</span></td><td><span class="empty">–</span></td>
+      <td><span class="empty">–</span></td><td><span class="empty">–</span></td><td><span class="empty">–</span></td><td><span class="empty">–</span></td>
+      <td class="qtd"><span class="empty">–</span></td>
+    </tr>
+    <tr>
+      <td class="sublabel">Y/Y</td>
+      <td class="red"><span class="empty">–</span></td><td class="red"><span class="empty">–</span></td><td class="green"><span class="empty">–</span></td><td class="red"><span class="empty">–</span></td>
+      <td class="red"><span class="empty">–</span></td><td class="red"><span class="empty">–</span></td><td class="red"><span class="empty">–</span></td><td class="green"><span class="empty">–</span></td><td class="red"><span class="empty">–</span></td>
+      <td class="red"><span class="empty">–</span></td><td class="red"><span class="empty">–</span></td><td class="green"><span class="empty">–</span></td><td class="red"><span class="empty">–</span></td>
+      <td class="qtd red"><span class="empty">–</span></td>
+    </tr>
+
+    <!-- APPLE ON 1P+3P -->
+    <tr class="apple">
+      <td class="label">Apple (#)</td>
+      <td><span class="empty">–</span></td><td><span class="empty">–</span></td><td><span class="empty">–</span></td><td><span class="empty">–</span></td>
+      <td><span class="empty">–</span></td><td><span class="empty">–</span></td><td><span class="empty">–</span></td><td><span class="empty">–</span></td><td><span class="empty">–</span></td>
+      <td><span class="empty">–</span></td><td><span class="empty">–</span></td><td><span class="empty">–</span></td><td><span class="empty">–</span></td>
+      <td class="qtd"><span class="empty">–</span></td>
+    </tr>
+    <tr class="apple">
+      <td class="sublabel">Y/Y</td>
+      <td class="red"><span class="empty">–</span></td><td class="red"><span class="empty">–</span></td><td class="red"><span class="empty">–</span></td><td class="red"><span class="empty">–</span></td>
+      <td class="red"><span class="empty">–</span></td><td class="red"><span class="empty">–</span></td><td class="red"><span class="empty">–</span></td><td class="red"><span class="empty">–</span></td><td class="red"><span class="empty">–</span></td>
+      <td class="red"><span class="empty">–</span></td><td class="red"><span class="empty">–</span></td><td class="red"><span class="empty">–</span></td><td class="red"><span class="empty">–</span></td>
+      <td class="qtd red"><span class="empty">–</span></td>
+    </tr>
+    <tr class="ms-row apple">
+      <td class="mslabel">MS%</td>
+      <td><span class="empty">–</span></td><td><span class="empty">–</span></td><td><span class="empty">–</span></td><td><span class="empty">–</span></td>
+      <td><span class="empty">–</span></td><td><span class="empty">–</span></td><td><span class="empty">–</span></td><td><span class="empty">–</span></td><td><span class="empty">–</span></td>
+      <td><span class="empty">–</span></td><td><span class="empty">–</span></td><td><span class="empty">–</span></td><td><span class="empty">–</span></td>
+      <td class="qtd-ms"><span class="empty">–</span></td>
+    </tr>
+    <tr class="msyy-row apple">
+      <td class="mslabel">MS% Y/Y</td>
+      <td class="red"><span class="empty">–</span></td><td class="red"><span class="empty">–</span></td><td class="red"><span class="empty">–</span></td><td class="red"><span class="empty">–</span></td>
+      <td class="red"><span class="empty">–</span></td><td class="red"><span class="empty">–</span></td><td class="red"><span class="empty">–</span></td><td class="red"><span class="empty">–</span></td><td class="red"><span class="empty">–</span></td>
+      <td class="red"><span class="empty">–</span></td><td class="red"><span class="empty">–</span></td><td class="red"><span class="empty">–</span></td><td class="red"><span class="empty">–</span></td>
+      <td class="qtd-ms red"><span class="empty">–</span></td>
+    </tr>
+
+    <!-- SAMSUNG ON 1P+3P -->
+    <tr>
+      <td class="label">Samsung (#)</td>
+      <td><span class="empty">–</span></td><td><span class="empty">–</span></td><td><span class="empty">–</span></td><td><span class="empty">–</span></td>
+      <td><span class="empty">–</span></td><td><span class="empty">–</span></td><td><span class="empty">–</span></td><td><span class="empty">–</span></td><td><span class="empty">–</span></td>
+      <td><span class="empty">–</span></td><td><span class="empty">–</span></td><td><span class="empty">–</span></td><td><span class="empty">–</span></td>
+      <td class="qtd"><span class="empty">–</span></td>
+    </tr>
+    <tr>
+      <td class="sublabel">Y/Y</td>
+      <td class="red"><span class="empty">–</span></td><td class="red"><span class="empty">–</span></td><td class="green"><span class="empty">–</span></td><td class="green"><span class="empty">–</span></td>
+      <td class="green"><span class="empty">–</span></td><td class="red"><span class="empty">–</span></td><td class="red"><span class="empty">–</span></td><td class="green"><span class="empty">–</span></td><td class="green"><span class="empty">–</span></td>
+      <td class="green"><span class="empty">–</span></td><td class="green"><span class="empty">–</span></td><td class="green"><span class="empty">–</span></td><td class="green"><span class="empty">–</span></td>
+      <td class="qtd green"><span class="empty">–</span></td>
+    </tr>
+    <tr class="ms-row">
+      <td class="mslabel">MS%</td>
+      <td><span class="empty">–</span></td><td><span class="empty">–</span></td><td><span class="empty">–</span></td><td><span class="empty">–</span></td>
+      <td><span class="empty">–</span></td><td><span class="empty">–</span></td><td><span class="empty">–</span></td><td><span class="empty">–</span></td><td><span class="empty">–</span></td>
+      <td><span class="empty">–</span></td><td><span class="empty">–</span></td><td><span class="empty">–</span></td><td><span class="empty">–</span></td>
+      <td class="qtd-ms"><span class="empty">–</span></td>
+    </tr>
+    <tr class="msyy-row">
+      <td class="mslabel">MS% Y/Y</td>
+      <td class="green"><span class="empty">–</span></td><td class="green"><span class="empty">–</span></td><td class="green"><span class="empty">–</span></td><td class="green"><span class="empty">–</span></td>
+      <td class="green"><span class="empty">–</span></td><td class="green"><span class="empty">–</span></td><td class="green"><span class="empty">–</span></td><td class="green"><span class="empty">–</span></td><td class="green"><span class="empty">–</span></td>
+      <td class="green"><span class="empty">–</span></td><td class="green"><span class="empty">–</span></td><td class="green"><span class="empty">–</span></td><td class="green"><span class="empty">–</span></td>
+      <td class="qtd-ms green"><span class="empty">–</span></td>
+    </tr>
+
+    <tr class="spacer"><td colspan="15"><span class="empty">–</span></td></tr>
+
+    <!-- TOTAL MELI 1P+3P -->
+    <tr class="meli-header">
+      <td class="label">Total Meli (#)</td>
+      <td><span class="empty">–</span></td><td><span class="empty">–</span></td><td><span class="empty">–</span></td><td><span class="empty">–</span></td>
+      <td><span class="empty">–</span></td><td><span class="empty">–</span></td><td><span class="empty">–</span></td><td><span class="empty">–</span></td><td><span class="empty">–</span></td>
+      <td><span class="empty">–</span></td><td><span class="empty">–</span></td><td><span class="empty">–</span></td><td><span class="empty">–</span></td>
+      <td class="qtd"><span class="empty">–</span></td>
+    </tr>
+    <tr>
+      <td class="sublabel">Y/Y</td>
+      <td class="red"><span class="empty">–</span></td><td class="green"><span class="empty">–</span></td><td class="green"><span class="empty">–</span></td><td class="green"><span class="empty">–</span></td>
+      <td class="green"><span class="empty">–</span></td><td class="green"><span class="empty">–</span></td><td class="green"><span class="empty">–</span></td><td class="green"><span class="empty">–</span></td><td class="green"><span class="empty">–</span></td>
+      <td class="red"><span class="empty">–</span></td><td class="green"><span class="empty">–</span></td><td class="green"><span class="empty">–</span></td><td class="green"><span class="empty">–</span></td>
+      <td class="qtd green"><span class="empty">–</span></td>
+    </tr>
+
+    <!-- APPLE MELI 1P+3P -->
+    <tr class="apple">
+      <td class="label">Apple (#)</td>
+      <td><span class="empty">–</span></td><td><span class="empty">–</span></td><td><span class="empty">–</span></td><td><span class="empty">–</span></td>
+      <td><span class="empty">–</span></td><td><span class="empty">–</span></td><td><span class="empty">–</span></td><td><span class="empty">–</span></td><td><span class="empty">–</span></td>
+      <td><span class="empty">–</span></td><td><span class="empty">–</span></td><td><span class="empty">–</span></td><td><span class="empty">–</span></td>
+      <td class="qtd"><span class="empty">–</span></td>
+    </tr>
+    <tr class="apple">
+      <td class="sublabel">Y/Y</td>
+      <td class="red"><span class="empty">–</span></td><td class="red"><span class="empty">–</span></td><td class="red"><span class="empty">–</span></td><td class="red"><span class="empty">–</span></td>
+      <td class="green"><span class="empty">–</span></td><td class="red"><span class="empty">–</span></td><td class="green"><span class="empty">–</span></td><td class="green"><span class="empty">–</span></td><td class="green"><span class="empty">–</span></td>
+      <td class="red"><span class="empty">–</span></td><td class="green"><span class="empty">–</span></td><td class="red"><span class="empty">–</span></td><td class="red"><span class="empty">–</span></td>
+      <td class="qtd red"><span class="empty">–</span></td>
+    </tr>
+    <tr class="ms-row apple">
+      <td class="mslabel">MS%</td>
+      <td><span class="empty">–</span></td><td><span class="empty">–</span></td><td><span class="empty">–</span></td><td><span class="empty">–</span></td>
+      <td><span class="empty">–</span></td><td><span class="empty">–</span></td><td><span class="empty">–</span></td><td><span class="empty">–</span></td><td><span class="empty">–</span></td>
+      <td><span class="empty">–</span></td><td><span class="empty">–</span></td><td><span class="empty">–</span></td><td><span class="empty">–</span></td>
+      <td class="qtd-ms"><span class="empty">–</span></td>
+    </tr>
+    <tr class="msyy-row apple">
+      <td class="mslabel">MS% Y/Y</td>
+      <td class="red"><span class="empty">–</span></td><td class="red"><span class="empty">–</span></td><td class="red"><span class="empty">–</span></td><td class="red"><span class="empty">–</span></td>
+      <td class="green"><span class="empty">–</span></td><td class="red"><span class="empty">–</span></td><td class="green"><span class="empty">–</span></td><td class="green"><span class="empty">–</span></td><td class="green"><span class="empty">–</span></td>
+      <td class="green"><span class="empty">–</span></td><td class="red"><span class="empty">–</span></td><td class="red"><span class="empty">–</span></td><td class="red"><span class="empty">–</span></td>
+      <td class="qtd-ms red"><span class="empty">–</span></td>
+    </tr>
+
+    <!-- SAMSUNG MELI 1P+3P -->
+    <tr>
+      <td class="label">Samsung (#)</td>
+      <td><span class="empty">–</span></td><td><span class="empty">–</span></td><td><span class="empty">–</span></td><td><span class="empty">–</span></td>
+      <td><span class="empty">–</span></td><td><span class="empty">–</span></td><td><span class="empty">–</span></td><td><span class="empty">–</span></td><td><span class="empty">–</span></td>
+      <td><span class="empty">–</span></td><td><span class="empty">–</span></td><td><span class="empty">–</span></td><td><span class="empty">–</span></td>
+      <td class="qtd"><span class="empty">–</span></td>
+    </tr>
+    <tr>
+      <td class="sublabel">Y/Y</td>
+      <td class="green"><span class="empty">–</span></td><td class="green"><span class="empty">–</span></td><td class="green"><span class="empty">–</span></td><td class="green"><span class="empty">–</span></td>
+      <td class="green"><span class="empty">–</span></td><td class="green"><span class="empty">–</span></td><td class="green"><span class="empty">–</span></td><td class="green"><span class="empty">–</span></td><td class="green"><span class="empty">–</span></td>
+      <td class="green"><span class="empty">–</span></td><td class="green"><span class="empty">–</span></td><td class="green"><span class="empty">–</span></td><td class="green"><span class="empty">–</span></td>
+      <td class="qtd green"><span class="empty">–</span></td>
+    </tr>
+    <tr class="ms-row">
+      <td class="mslabel">MS%</td>
+      <td><span class="empty">–</span></td><td><span class="empty">–</span></td><td><span class="empty">–</span></td><td><span class="empty">–</span></td>
+      <td><span class="empty">–</span></td><td><span class="empty">–</span></td><td><span class="empty">–</span></td><td><span class="empty">–</span></td><td><span class="empty">–</span></td>
+      <td><span class="empty">–</span></td><td><span class="empty">–</span></td><td><span class="empty">–</span></td><td><span class="empty">–</span></td>
+      <td class="qtd-ms"><span class="empty">–</span></td>
+    </tr>
+    <tr class="msyy-row">
+      <td class="mslabel">MS% Y/Y</td>
+      <td class="green"><span class="empty">–</span></td><td class="green"><span class="empty">–</span></td><td class="green"><span class="empty">–</span></td><td class="green"><span class="empty">–</span></td>
+      <td class="green"><span class="empty">–</span></td><td class="green"><span class="empty">–</span></td><td class="green"><span class="empty">–</span></td><td class="green"><span class="empty">–</span></td><td class="green"><span class="empty">–</span></td>
+      <td class="green"><span class="empty">–</span></td><td class="green"><span class="empty">–</span></td><td class="green"><span class="empty">–</span></td><td class="green"><span class="empty">–</span></td>
+      <td class="qtd-ms green"><span class="empty">–</span></td>
+    </tr>
+
+  </tbody>
+</table>
+
+<br><br>
+
+<h2>Q4'26 GFK Market Share: Online 1P + Offline</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th class="left" style="min-width:160px;">Market GFK (#)</th>
+      <th>W1</th><th>W2</th><th>W3</th><th>W4</th>
+      <th>W5</th><th>W6</th><th>W7</th><th>W8</th><th>W9</th>
+      <th>W10</th><th>W11</th><th>W12</th><th>W13</th>
+      <th>QTD</th>
+    </tr>
+  </thead>
+  <tbody>
+
+    <!-- TOTAL ON+OFF -->
+    <tr class="section-header">
+      <td class="label">Total ON+OFF</td>
+      <td><span class="empty">–</span></td><td><span class="empty">–</span></td><td><span class="empty">–</span></td><td><span class="empty">–</span></td>
+      <td><span class="empty">–</span></td><td><span class="empty">–</span></td><td><span class="empty">–</span></td><td><span class="empty">–</span></td><td><span class="empty">–</span></td>
+      <td><span class="empty">–</span></td><td><span class="empty">–</span></td><td><span class="empty">–</span></td><td><span class="empty">–</span></td>
+      <td class="qtd"><span class="empty">–</span></td>
+    </tr>
+    <tr>
+      <td class="sublabel">Y/Y</td>
+      <td class="red"><span class="empty">–</span></td><td class="red"><span class="empty">–</span></td><td class="red"><span class="empty">–</span></td><td class="green"><span class="empty">–</span></td>
+      <td class="red"><span class="empty">–</span></td><td class="red"><span class="empty">–</span></td><td class="red"><span class="empty">–</span></td><td class="green"><span class="empty">–</span></td><td class="red"><span class="empty">–</span></td>
+      <td class="red"><span class="empty">–</span></td><td class="red"><span class="empty">–</span></td><td class="red"><span class="empty">–</span></td><td class="red"><span class="empty">–</span></td>
+      <td class="qtd red"><span class="empty">–</span></td>
+    </tr>
+
+    <!-- APPLE ON+OFF -->
+    <tr class="apple">
+      <td class="label">Apple (#)</td>
+      <td><span class="empty">–</span></td><td><span class="empty">–</span></td><td><span class="empty">–</span></td><td><span class="empty">–</span></td>
+      <td><span class="empty">–</span></td><td><span class="empty">–</span></td><td><span class="empty">–</span></td><td><span class="empty">–</span></td><td><span class="empty">–</span></td>
+      <td><span class="empty">–</span></td><td><span class="empty">–</span></td><td><span class="empty">–</span></td><td><span class="empty">–</span></td>
+      <td class="qtd"><span class="empty">–</span></td>
+    </tr>
+    <tr class="apple">
+      <td class="sublabel">Y/Y</td>
+      <td class="red"><span class="empty">–</span></td><td class="red"><span class="empty">–</span></td><td class="red"><span class="empty">–</span></td><td class="red"><span class="empty">–</span></td>
+      <td class="red"><span class="empty">–</span></td><td class="red"><span class="empty">–</span></td><td class="red"><span class="empty">–</span></td><td class="red"><span class="empty">–</span></td><td class="red"><span class="empty">–</span></td>
+      <td class="red"><span class="empty">–</span></td><td class="red"><span class="empty">–</span></td><td class="red"><span class="empty">–</span></td><td class="red"><span class="empty">–</span></td>
+      <td class="qtd red"><span class="empty">–</span></td>
+    </tr>
+    <tr class="ms-row apple">
+      <td class="mslabel">MS%</td>
+      <td><span class="empty">–</span></td><td><span class="empty">–</span></td><td><span class="empty">–</span></td><td><span class="empty">–</span></td>
+      <td><span class="empty">–</span></td><td><span class="empty">–</span></td><td><span class="empty">–</span></td><td><span class="empty">–</span></td><td><span class="empty">–</span></td>
+      <td><span class="empty">–</span></td><td><span class="empty">–</span></td><td><span class="empty">–</span></td><td><span class="empty">–</span></td>
+      <td class="qtd-ms"><span class="empty">–</span></td>
+    </tr>
+    <tr class="msyy-row apple">
+      <td class="mslabel">MS% Y/Y</td>
+      <td class="red"><span class="empty">–</span></td><td class="red"><span class="empty">–</span></td><td class="red"><span class="empty">–</span></td><td class="red"><span class="empty">–</span></td>
+      <td class="red"><span class="empty">–</span></td><td class="red"><span class="empty">–</span></td><td class="red"><span class="empty">–</span></td><td class="red"><span class="empty">–</span></td><td class="red"><span class="empty">–</span></td>
+      <td class="red"><span class="empty">–</span></td><td class="red"><span class="empty">–</span></td><td class="red"><span class="empty">–</span></td><td class="red"><span class="empty">–</span></td>
+      <td class="qtd-ms red"><span class="empty">–</span></td>
+    </tr>
+
+    <!-- SAMSUNG ON+OFF -->
+    <tr>
+      <td class="label">Samsung (#)</td>
+      <td><span class="empty">–</span></td><td><span class="empty">–</span></td><td><span class="empty">–</span></td><td><span class="empty">–</span></td>
+      <td><span class="empty">–</span></td><td><span class="empty">–</span></td><td><span class="empty">–</span></td><td><span class="empty">–</span></td><td><span class="empty">–</span></td>
+      <td><span class="empty">–</span></td><td><span class="empty">–</span></td><td><span class="empty">–</span></td><td><span class="empty">–</span></td>
+      <td class="qtd"><span class="empty">–</span></td>
+    </tr>
+    <tr>
+      <td class="sublabel">Y/Y</td>
+      <td class="red"><span class="empty">–</span></td><td class="red"><span class="empty">–</span></td><td class="green"><span class="empty">–</span></td><td class="green"><span class="empty">–</span></td>
+      <td class="red"><span class="empty">–</span></td><td class="red"><span class="empty">–</span></td><td class="red"><span class="empty">–</span></td><td class="green"><span class="empty">–</span></td><td class="green"><span class="empty">–</span></td>
+      <td class="green"><span class="empty">–</span></td><td class="green"><span class="empty">–</span></td><td class="red"><span class="empty">–</span></td><td class="green"><span class="empty">–</span></td>
+      <td class="qtd green"><span class="empty">–</span></td>
+    </tr>
+    <tr class="ms-row">
+      <td class="mslabel">MS%</td>
+      <td><span class="empty">–</span></td><td><span class="empty">–</span></td><td><span class="empty">–</span></td><td><span class="empty">–</span></td>
+      <td><span class="empty">–</span></td><td><span class="empty">–</span></td><td><span class="empty">–</span></td><td><span class="empty">–</span></td><td><span class="empty">–</span></td>
+      <td><span class="empty">–</span></td><td><span class="empty">–</span></td><td><span class="empty">–</span></td><td><span class="empty">–</span></td>
+      <td class="qtd-ms"><span class="empty">–</span></td>
+    </tr>
+    <tr class="msyy-row">
+      <td class="mslabel">MS% Y/Y</td>
+      <td class="red"><span class="empty">–</span></td><td class="green"><span class="empty">–</span></td><td class="green"><span class="empty">–</span></td><td class="green"><span class="empty">–</span></td>
+      <td class="green"><span class="empty">–</span></td><td class="green"><span class="empty">–</span></td><td class="green"><span class="empty">–</span></td><td class="green"><span class="empty">–</span></td><td class="green"><span class="empty">–</span></td>
+      <td class="green"><span class="empty">–</span></td><td class="green"><span class="empty">–</span></td><td class="green"><span class="empty">–</span></td><td class="green"><span class="empty">–</span></td>
+      <td class="qtd-ms green"><span class="empty">–</span></td>
+    </tr>
+
+    <tr class="spacer"><td colspan="15"><span class="empty">–</span></td></tr>
+
+    <!-- TOTAL MELI ON+OFF -->
+    <tr class="meli-header">
+      <td class="label">Total Meli (#)</td>
+      <td><span class="empty">–</span></td><td><span class="empty">–</span></td><td><span class="empty">–</span></td><td><span class="empty">–</span></td>
+      <td><span class="empty">–</span></td><td><span class="empty">–</span></td><td><span class="empty">–</span></td><td><span class="empty">–</span></td><td><span class="empty">–</span></td>
+      <td><span class="empty">–</span></td><td><span class="empty">–</span></td><td><span class="empty">–</span></td><td><span class="empty">–</span></td>
+      <td class="qtd"><span class="empty">–</span></td>
+    </tr>
+    <tr>
+      <td class="sublabel">Y/Y</td>
+      <td class="green"><span class="empty">–</span></td><td class="green"><span class="empty">–</span></td><td class="green"><span class="empty">–</span></td><td class="green"><span class="empty">–</span></td>
+      <td class="green"><span class="empty">–</span></td><td class="green"><span class="empty">–</span></td><td class="green"><span class="empty">–</span></td><td class="green"><span class="empty">–</span></td><td class="green"><span class="empty">–</span></td>
+      <td class="green"><span class="empty">–</span></td><td class="green"><span class="empty">–</span></td><td class="green"><span class="empty">–</span></td><td class="green"><span class="empty">–</span></td>
+      <td class="qtd green"><span class="empty">–</span></td>
+    </tr>
+
+    <!-- APPLE MELI ON+OFF -->
+    <tr class="apple">
+      <td class="label">Apple (#)</td>
+      <td><span class="empty">–</span></td><td><span class="empty">–</span></td><td><span class="empty">–</span></td><td><span class="empty">–</span></td>
+      <td><span class="empty">–</span></td><td><span class="empty">–</span></td><td><span class="empty">–</span></td><td><span class="empty">–</span></td><td><span class="empty">–</span></td>
+      <td><span class="empty">–</span></td><td><span class="empty">–</span></td><td><span class="empty">–</span></td><td><span class="empty">–</span></td>
+      <td class="qtd"><span class="empty">–</span></td>
+    </tr>
+    <tr class="apple">
+      <td class="sublabel">Y/Y</td>
+      <td class="red"><span class="empty">–</span></td><td class="red"><span class="empty">–</span></td><td class="red"><span class="empty">–</span></td><td class="red"><span class="empty">–</span></td>
+      <td class="green"><span class="empty">–</span></td><td class="red"><span class="empty">–</span></td><td class="green"><span class="empty">–</span></td><td class="green"><span class="empty">–</span></td><td class="red"><span class="empty">–</span></td>
+      <td class="red"><span class="empty">–</span></td><td class="red"><span class="empty">–</span></td><td class="red"><span class="empty">–</span></td><td class="red"><span class="empty">–</span></td>
+      <td class="qtd red"><span class="empty">–</span></td>
+    </tr>
+    <tr class="ms-row apple">
+      <td class="mslabel">MS%</td>
+      <td><span class="empty">–</span></td><td><span class="empty">–</span></td><td><span class="empty">–</span></td><td><span class="empty">–</span></td>
+      <td><span class="empty">–</span></td><td><span class="empty">–</span></td><td><span class="empty">–</span></td><td><span class="empty">–</span></td><td><span class="empty">–</span></td>
+      <td><span class="empty">–</span></td><td><span class="empty">–</span></td><td><span class="empty">–</span></td><td><span class="empty">–</span></td>
+      <td class="qtd-ms"><span class="empty">–</span></td>
+    </tr>
+    <tr class="msyy-row apple">
+      <td class="mslabel">MS% Y/Y</td>
+      <td class="red"><span class="empty">–</span></td><td class="red"><span class="empty">–</span></td><td class="red"><span class="empty">–</span></td><td class="red"><span class="empty">–</span></td>
+      <td class="red"><span class="empty">–</span></td><td class="red"><span class="empty">–</span></td><td class="red"><span class="empty">–</span></td><td class="red"><span class="empty">–</span></td><td class="red"><span class="empty">–</span></td>
+      <td class="red"><span class="empty">–</span></td><td class="red"><span class="empty">–</span></td><td class="red"><span class="empty">–</span></td><td class="red"><span class="empty">–</span></td>
+      <td class="qtd-ms red"><span class="empty">–</span></td>
+    </tr>
+
+    <!-- SAMSUNG MELI ON+OFF -->
+    <tr>
+      <td class="label">Samsung (#)</td>
+      <td><span class="empty">–</span></td><td><span class="empty">–</span></td><td><span class="empty">–</span></td><td><span class="empty">–</span></td>
+      <td><span class="empty">–</span></td><td><span class="empty">–</span></td><td><span class="empty">–</span></td><td><span class="empty">–</span></td><td><span class="empty">–</span></td>
+      <td><span class="empty">–</span></td><td><span class="empty">–</span></td><td><span class="empty">–</span></td><td><span class="empty">–</span></td>
+      <td class="qtd"><span class="empty">–</span></td>
+    </tr>
+    <tr>
+      <td class="sublabel">Y/Y</td>
+      <td class="green"><span class="empty">–</span></td><td class="green"><span class="empty">–</span></td><td class="green"><span class="empty">–</span></td><td class="green"><span class="empty">–</span></td>
+      <td class="green"><span class="empty">–</span></td><td class="green"><span class="empty">–</span></td><td class="green"><span class="empty">–</span></td><td class="green"><span class="empty">–</span></td><td class="green"><span class="empty">–</span></td>
+      <td class="green"><span class="empty">–</span></td><td class="green"><span class="empty">–</span></td><td class="green"><span class="empty">–</span></td><td class="green"><span class="empty">–</span></td>
+      <td class="qtd green"><span class="empty">–</span></td>
+    </tr>
+    <tr class="ms-row">
+      <td class="mslabel">MS%</td>
+      <td><span class="empty">–</span></td><td><span class="empty">–</span></td><td><span class="empty">–</span></td><td><span class="empty">–</span></td>
+      <td><span class="empty">–</span></td><td><span class="empty">–</span></td><td><span class="empty">–</span></td><td><span class="empty">–</span></td><td><span class="empty">–</span></td>
+      <td><span class="empty">–</span></td><td><span class="empty">–</span></td><td><span class="empty">–</span></td><td><span class="empty">–</span></td>
+      <td class="qtd-ms"><span class="empty">–</span></td>
+    </tr>
+    <tr class="msyy-row">
+      <td class="mslabel">MS% Y/Y</td>
+      <td class="green"><span class="empty">–</span></td><td class="green"><span class="empty">–</span></td><td class="green"><span class="empty">–</span></td><td class="green"><span class="empty">–</span></td>
+      <td class="green"><span class="empty">–</span></td><td class="red"><span class="empty">–</span></td><td class="green"><span class="empty">–</span></td><td class="green"><span class="empty">–</span></td><td class="green"><span class="empty">–</span></td>
+      <td class="green"><span class="empty">–</span></td><td class="green"><span class="empty">–</span></td><td class="green"><span class="empty">–</span></td><td class="green"><span class="empty">–</span></td>
+      <td class="qtd-ms green"><span class="empty">–</span></td>
+    </tr>
+
+  </tbody>
+</table>
+
+</div>
+
+<div id="tab-q3" class="tab-content" style="display:none;">
 
 <h2>Q3'26 GFK Market Share: Online 1P</h2>
 
@@ -619,5 +1167,15 @@
   </tbody>
 </table>
 
+</div>
+
+<script>
+function showTab(tab) {
+  document.getElementById('tab-q4').style.display = (tab === 'q4') ? '' : 'none';
+  document.getElementById('tab-q3').style.display = (tab === 'q3') ? '' : 'none';
+  document.getElementById('btn-q4').classList.toggle('active', tab === 'q4');
+  document.getElementById('btn-q3').classList.toggle('active', tab === 'q3');
+}
+</script>
 </body>
 </html>
